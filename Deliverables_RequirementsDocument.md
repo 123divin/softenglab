@@ -386,7 +386,7 @@ handleSupplier ..> deleteSupplier :<<include>>
 
 \<only relevant scenarios should be described>
 
-| Scenario 1.1 | |
+| Scenario 1.1 |corresponds to uc1 |
 | ------------- |:-------------:| 
 |  Precondition     | the owner's email or the employee's is arleady present  |
 |  Post condition     | the user is logged in |
@@ -396,9 +396,6 @@ handleSupplier ..> deleteSupplier :<<include>>
 |3	|		press the login button on the form and submit it|
 
 
-##### Scenario 1.2
-
-##### Scenario 1.x
 
 ### Use case 2, UC1.2 - logout
 
@@ -406,7 +403,9 @@ handleSupplier ..> deleteSupplier :<<include>>
 | ------------- |:-------------:| 
 |  Precondition     | user is arlead logged in |  
 |  Post condition     | user is logged out |
-|  Nominal Scenario     | the user presses the logout button  |
+|  Nominal Scenario     | the user presses the logout button |
+
+
 
 ### Use case 3, UC1.4 - delete account
 | Actors Involved        | owner  |
@@ -414,6 +413,7 @@ handleSupplier ..> deleteSupplier :<<include>>
 |  Precondition     | owner exists in the database |  
 |  Post condition     | owner no longer in the database |
 |  Nominal Scenario     | the user wants to use the app so he have to first register in order to customize it	|
+
 
 ### Use case 4, UC1.3 - create account
 | Actors Involved        | owner |
@@ -451,12 +451,37 @@ handleSupplier ..> deleteSupplier :<<include>>
 |  Post condition     | the owner is alerted |
 |  Nominal Scenario     |  the employee working alerts the manager that a certain pos is not working and the owner takes appropriate measures|
 
+##### Scenario 2 
+
+|scenario 2| | corresponds to UC 2|
+| ------------- |:-------------:|
+|Precondition| the systems crashes|
+|Postcondition| the owner takes necessary measures|
+|Step#		| 	Step description|
+|1			|employee presses a button to inform the owner|
+
 ### Use case 9, UC3.4,3.5,3.6,3.7 - Handle sales
 | Actors Involved        | 	employee |
 | ------------- |:-------------:| 
 |  Precondition     |  |  
 |  Post condition     |  |
 |  Nominal Scenario     | customer purchases goods and employee processes the transaction |
+
+##### Scenario 3
+
+|scenario s3 | corresponds to UC 3|
+| ------------- |:-------------:|
+|Precondition| |
+|Postcondition|a transaction takes place|
+|Step#		| 	Step description|
+|1|			customer puts the goods on the counter table|
+|2|			the employee takes goods and scans them|
+|3|			the customer handles him/her the fidelity card|
+|4|			the employee scans it on the fidelity card sensor|
+|5|			the customer chooses the method of payment|
+|6|			the customer pays|
+|7|			the sales system sends the data to the accounting system|
+
 
 ### Use case 10, UC3.2 apply discount
 | Actors Involved        | employee |
@@ -487,6 +512,15 @@ handleSupplier ..> deleteSupplier :<<include>>
 |  Post condition     |  |
 |  Nominal Scenario     | the owner check the stock list of product and perform different actions on it |
 
+##### Scenario 4
+|scenario 4 | corresponds to UC 4|
+|Precondition| |
+|Postcondition| the product is ordered again|
+|Step#		| 	Step description|
+|1|	owner types in the name or id of the product the system responds with full details about the product|
+
+			
+
 ### Use case 14, UC4.1 add a new product 
 | Actors Involved        |  owner, employee |
 | ------------- |:-------------:| 
@@ -506,7 +540,19 @@ handleSupplier ..> deleteSupplier :<<include>>
 | ------------- |:-------------:| 
 |  Precondition     | the customer has an email |  
 |  Post condition     | customer gets a new fidelity card |
-|  Nominal Scenario     |  |
+|  Nominal Scenario     | customer gives his email to the infopoint employee and the employee inserts it in threir database and a unique id is issued, and it is printed to the new fidelity card |
+
+##### Scenario 5
+
+|scenario 5 | corresponds to UC 5|
+| ------------- |:-------------:|
+|Precondition| the email is not arlead used |
+|Postcondition| the customer is provided with a fidelity card|
+|Step#		| 	Step description|
+|1|			|customer hadles employee his email account|
+|2			|the employee inserts it in the system and the system gives back a unique serial number which is printed to a fidelity card by a fidelity card system |
+|3|			employee gives the new card to the customer|
+|4|			employee adds that email account to the list for ads|
 
 ### Use case 17, UC6 - support accounting
 | Actors Involved        | employee,owner |
@@ -514,6 +560,15 @@ handleSupplier ..> deleteSupplier :<<include>>
 |  Precondition     |  |  
 |  Post condition     |  |
 |  Nominal Scenario     | the owner can access the server and see the employee schedule or salary |
+
+##### Scenario 6
+scenario 6 | corresponds to UC 6
+| ------------- |:-------------:| 
+|Precondition| owner or an employee with that role is the one only allowed to use perform this task|
+|Postcondition| |
+|Step#		| 	Step description|
+|1|			press the button for profit and loss calculation|
+|2|			send the report to the report list|
 
 ### Use case 18, UC 6.3 - View balance report
 | Actors Involved        | owner , bank employee |
@@ -545,6 +600,18 @@ handleSupplier ..> deleteSupplier :<<include>>
 |  Nominal Scenario     | the owner wants to delete an order after arleady processed  |
 |  Variants     | the owner no longer wants the product |
 
+##### Scenario 7
+
+|scenario 7 | corresponds to UC 7|
+| ------------- |:-------------:| 
+|Precondition| the product is low in the inventory|
+|Postcondition|| 
+|Step#		| 	Step description|
+|1|			if in the inventory a product is low, press the button for 	create order|
+|2|			fill the form and submit it|
+|3|			manager/owner will see it immediately and performs necessary measures|
+
+
 ### Use case 22, UC8 - Handle supplier
 | Actors Involved        |  owner |
 | ------------- |:-------------:| 
@@ -552,7 +619,19 @@ handleSupplier ..> deleteSupplier :<<include>>
 |  Post condition     |  |
 |  Nominal Scenario     | the owner wants to add,delete or edit suppliers information |
 
+##### Scenario 8
 
+|scenario 8 | corresponds to UC 8|
+| ------------- |:-------------:| 
+|Precondition| the owner is currently selling a certain product, the owner is the only account allowed to perform this task|
+
+|Postcondition| | 
+
+|Step#		| 	Step description|
+
+|1|			the owner checks the suppliers list and searches one with that product "X"|
+|2|			press delete |
+|3|			the system issues a warnig and the owner press Ok|
 
 # Glossary
 
