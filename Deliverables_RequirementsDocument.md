@@ -391,7 +391,6 @@ handleSupplier ..> deleteSupplier :<<include>>
 |  Precondition     | the owner's email or the employee's is arleady present  |
 |  Post condition     | the user is logged in |
 |Step#		| description |
-
 |1	|		press the login button|
 |2	|		type in your username and password|
 |3	|		press the login button on the form and submit it|
