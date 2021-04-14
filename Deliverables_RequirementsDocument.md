@@ -399,7 +399,7 @@ handleSupplier ..> deleteSupplier :<<include>>
 
 ##### Scenario 1.x
 
-### Use case 2, UC2 - logout
+### Use case 2, UC1.2 - logout
 
 | Actors Involved        | owner,employee |
 | ------------- |:-------------:| 
@@ -407,37 +407,36 @@ handleSupplier ..> deleteSupplier :<<include>>
 |  Post condition     | user is logged out |
 |  Nominal Scenario     | the user presses the logout button  |
 
-### Use case 4, UC4 - delete account
+### Use case 3, UC1.4 - delete account
 | Actors Involved        | owner  |
 | ------------- |:-------------:| 
 |  Precondition     | owner exists in the database |  
 |  Post condition     | owner no longer in the database |
 |  Nominal Scenario     | the user wants to use the app so he have to first register in order to customize it	|
 
-### Use case 3, UC3 - create account
+### Use case 4, UC1.3 - create account
 | Actors Involved        | owner |
 | ------------- |:-------------:| 
 |  Precondition     |	account not existing in the database |  
 |  Post condition     |  |
-|  Nominal Scenario     | user inters email and username and password
-	|
+|  Nominal Scenario     | user inters email and username and password |
 
 
-### Use case 5, UC5 - Define roles and skills 
+### Use case 5, UC1.5 - Define roles and skills 
 | Actors Involved        | employee,owner |
 | ------------- |:-------------:| 
 |  Precondition     | employee is present in the database |  
 |  Post condition     |	 |
 |  Nominal Scenario     | 	the owner defines  roles for each employee he has for accountability purposes	 |
 
-### Use case 6, UC6 - change account info
+### Use case 6, UC1.6 - change account info
 | Actors Involved        | owner |
 | ------------- |:-------------:| 
 |  Precondition     | the owner's info is arleady present in the database |  
 |  Post condition     |  |
 |  Nominal Scenario     | the owner changes the employee or his own account info eg; roles of employee ... |
 
-### Use case 7, UC7 - report user access into cash
+### Use case 7, UC1.7 - report user access into cash
 | Actors Involved        |  employee,owner,security services |
 | ------------- |:-------------:| 
 |  Precondition     | anyone is stealing |  
@@ -557,6 +556,82 @@ handleSupplier ..> deleteSupplier :<<include>>
 # Glossary
 
 \<use UML class diagram to define important terms, or concepts in the domain of the system, and their relationships> 
+
+``` plantuml
+
+class EZShopSystem {
+		+ Handle_Sales()
+		+ Handle_Inventory()
+		+ Handle_Customers()
+		+ Support_Accounting()
+	}
+        note "a system that manages everything from ordering new product\n,managing the inventory,employees with their timetables\n and profit and loss accounting, to manage customers\n with fidelity cards and advertising " as a1
+         EZShopSystem .. a1
+
+	class Computer {
+	}
+
+	class Switch {
+	}
+	
+	class BadgeSystem {
+	}
+           
+         note "system that reads the employee's\n badge on entrance" as b1
+
+         BadgeSystem .. b1
+
+
+	class BadgeSensor {
+	}
+
+	class FideltyCardSystem {
+	}
+
+	class CardIssuer {
+	}
+        
+        note "a unique code stamped on a card and\n is issued to every willing customer" as c1
+         CardIssuer ..  c1
+
+	class CashRegistersSystem {
+	}
+
+        note "deal with all the commercial transaction\n between a customer and an employee" as d1
+        d1 .. CashRegistersSystem
+
+	class PaymentSystem {
+	}
+
+
+	class PaymentReader {
+	}
+        
+        note "a system for acceptiong a cash paymen\nt or a credit card payment" as e1
+        PaymentReader .. e1
+
+	class BarCodeSystem {
+	}
+
+	class BarCodeSensor {
+	}
+
+        note " a sensor for scanning sold items\n at each transaction on the counter\n by an employee or a customer(in case of no assist counter)" as f1
+        BarCodeSensor .. f1
+
+	EZShopSystem o-- Computer
+	EZShopSystem o-- BadgeSystem
+	EZShopSystem o-- FideltyCardSystem
+	EZShopSystem o-- CashRegistersSystem
+	Computer o-- Switch
+	BadgeSystem o-- BadgeSensor
+	FideltyCardSystem o-- CardIssuer
+	CashRegistersSystem o-- PaymentSystem
+	CashRegistersSystem o-- BarCodeSystem
+	PaymentSystem o-- PaymentReader
+	BarCodeSystem o-- BarCodeSensor
+
+```
 
 \<concepts are used consistently all over the document, ex in use cases, requirements etc>
 
