@@ -453,21 +453,14 @@ handleSupplier ..> deleteSupplier :<<include>>
 
 ##### Scenario 2 
 
-|scenario 2| | corresponds to UC 2|
+|scenario 2 | corresponds to UC 2|
 | ------------- |:-------------:|
 |Precondition| the systems crashes|
 |Postcondition| the owner takes necessary measures|
 |Step#		| description|
 |1		|	employee presses a button to inform the owner|
 
-| Scenario 1.1 |corresponds to uc1 |
-| ------------- |:-------------:| 
-|  Precondition     | the owner's email or the employee's is arleady present  |
-|  Post condition     | the user is logged in |
-|Step#		| description |
-|1	|		press the login button|
-|2	|		type in your username and password|
-|3	|		press the login button on the form and submit it|
+
 
 ### Use case 9, UC3.4,3.5,3.6,3.7 - Handle sales
 | Actors Involved        | 	employee |
@@ -482,7 +475,7 @@ handleSupplier ..> deleteSupplier :<<include>>
 | ------------- |:-------------:|
 |Precondition| |
 |Postcondition|a transaction takes place|
-|Step#		| 	Step description|
+|Step#		| 	 description|
 |1|			customer puts the goods on the counter table|
 |2|			the employee takes goods and scans them|
 |3|			the customer handles him/her the fidelity card|
@@ -523,10 +516,13 @@ handleSupplier ..> deleteSupplier :<<include>>
 
 ##### Scenario 4
 |scenario 4 | corresponds to UC 4|
+| ------------- |:-------------:|
 |Precondition| |
 |Postcondition| the product is ordered again|
-|Step#		| 	Step description|
-|1|	owner types in the name or id of the product the system responds with full details about the product|
+|Step#		|  description	|
+|1	|	owner types in the name or id of the product the system responds with full details about the product|
+
+
 
 			
 
@@ -557,7 +553,7 @@ handleSupplier ..> deleteSupplier :<<include>>
 | ------------- |:-------------:|
 |Precondition| the email is not arlead used |
 |Postcondition| the customer is provided with a fidelity card|
-|Step#		| 	Step description|
+|Step#		| 	 description|
 |1|			|customer hadles employee his email account|
 |2			|the employee inserts it in the system and the system gives back a unique serial number which is printed to a fidelity card by a fidelity card system |
 |3|			employee gives the new card to the customer|
@@ -575,7 +571,7 @@ scenario 6 | corresponds to UC 6
 | ------------- |:-------------:| 
 |Precondition| owner or an employee with that role is the one only allowed to use perform this task|
 |Postcondition| |
-|Step#		| 	Step description|
+|Step#		| 	 description|
 |1|			press the button for profit and loss calculation|
 |2|			send the report to the report list|
 
@@ -615,7 +611,7 @@ scenario 6 | corresponds to UC 6
 | ------------- |:-------------:| 
 |Precondition| the product is low in the inventory|
 |Postcondition|| 
-|Step#		| 	Step description|
+|Step#		| 	 description|
 |1|			if in the inventory a product is low, press the button for 	create order|
 |2|			fill the form and submit it|
 |3|			manager/owner will see it immediately and performs necessary measures|
@@ -633,11 +629,8 @@ scenario 6 | corresponds to UC 6
 |scenario 8 | corresponds to UC 8|
 | ------------- |:-------------:| 
 |Precondition| the owner is currently selling a certain product, the owner is the only account allowed to perform this task|
-
 |Postcondition| | 
-
-|Step#		| 	Step description|
-
+|Step#		|  description|
 |1|			the owner checks the suppliers list and searches one with that product "X"|
 |2|			press delete |
 |3|			the system issues a warnig and the owner press Ok|
