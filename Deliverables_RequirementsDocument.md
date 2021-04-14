@@ -194,6 +194,8 @@ Camilla is a 80 years old, and unfortunally she doesn't have a car so she can't 
 ## Use case diagram
 \<define here UML Use case diagram UCD summarizing all use cases, and their relationships>
 
+``` plantuml
+
 left to right direction
 
 actor "Owner/Manager" as om
@@ -361,7 +363,7 @@ handleSupplier ..> newSupplier : <<include>>
 handleSupplier ..> editSupplier : <<include>>
 handleSupplier ..> deleteSupplier :<<include>>
 
-
+```
 
 \<next describe here each use case in the UCD>
 
