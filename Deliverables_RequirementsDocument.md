@@ -388,12 +388,14 @@ handleSupplier ..> deleteSupplier :<<include>>
 
 | Scenario 1.1 | |
 | ------------- |:-------------:| 
-|  Precondition     | \<Boolean expression, must evaluate to true before the scenario can start> |
-|  Post condition     | \<Boolean expression, must evaluate to true after scenario is finished> |
-| Step#        | Description  |
-|  1     |  |  
-|  2     |  |
-|  ...     |  |
+|  Precondition     | the owner's email or the employee's is arleady present  |
+|  Post condition     | the user is logged in |
+|Step#		| description |
+
+|1	|		press the login button|
+|2	|		type in your username and password|
+|3	|		press the login button on the form and submit it|
+
 
 ##### Scenario 1.2
 
