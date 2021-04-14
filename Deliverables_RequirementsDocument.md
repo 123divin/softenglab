@@ -445,122 +445,110 @@ handleSupplier ..> deleteSupplier :<<include>>
 ### Use case 8, UC2 - report crash events
 | Actors Involved        | employee,owner |
 | ------------- |:-------------:| 
-|  Precondition     | \<Boolean expression, must evaluate to true before the UC can start> |  
-|  Post condition     | \<Boolean expression, must evaluate to true after UC is finished> |
-|  Nominal Scenario     | \<Textual description of actions executed by the UC> |
-|  Variants     | \<other executions, ex in case of errors> |
+|  Precondition     | the cash system is not working |  
+|  Post condition     | the owner is alerted |
+|  Nominal Scenario     |  the employee working alerts the manager that a certain pos is not working and the owner takes appropriate measures|
 
-### Use case 9, UCx
-| Actors Involved        |  |
+### Use case 9, UC3.4,3.5,3.6,3.7 - Handle sales
+| Actors Involved        | 	employee |
 | ------------- |:-------------:| 
-|  Precondition     | \<Boolean expression, must evaluate to true before the UC can start> |  
-|  Post condition     | \<Boolean expression, must evaluate to true after UC is finished> |
-|  Nominal Scenario     | \<Textual description of actions executed by the UC> |
-|  Variants     | \<other executions, ex in case of errors> |
+|  Precondition     |  |  
+|  Post condition     |  |
+|  Nominal Scenario     | customer purchases goods and employee processes the transaction |
 
-### Use case 10, UCx
-| Actors Involved        |  |
+### Use case 10, UC3.2 apply discount
+| Actors Involved        | employee |
 | ------------- |:-------------:| 
-|  Precondition     | \<Boolean expression, must evaluate to true before the UC can start> |  
-|  Post condition     | \<Boolean expression, must evaluate to true after UC is finished> |
-|  Nominal Scenario     | \<Textual description of actions executed by the UC> |
-|  Variants     | \<other executions, ex in case of errors> |
+|  Precondition     | the product has a discount |  
+|  Post condition     | the discount is applied on the product bought |
+|  Nominal Scenario     |the employee after checking the availability of a discount; substracts the discount to the original price |
+|  Variants     | no discount; the customer pays the full price |
 
-### Use case 11, UCx
-| Actors Involved        |  |
+### Use case 11, UC3.3 Fidelity card in a transaction
+| Actors Involved        | employee , customer  |
 | ------------- |:-------------:| 
-|  Precondition     | \<Boolean expression, must evaluate to true before the UC can start> |  
-|  Post condition     | \<Boolean expression, must evaluate to true after UC is finished> |
-|  Nominal Scenario     | \<Textual description of actions executed by the UC> |
-|  Variants     | \<other executions, ex in case of errors> |
+|  Precondition     | 	the customer has a fidelity card |  
+|  Post condition     |	the customer gets points for each transaction he uses a fidelity |
+|  Nominal Scenario     | the customer before paying passes a fidelity card to add points |
 
-### Use case 12, UCx
-| Actors Involved        |  |
+### Use case 12, UC3.9 - store information about shopping made
+| Actors Involved        | employee |
 | ------------- |:-------------:| 
-|  Precondition     | \<Boolean expression, must evaluate to true before the UC can start> |  
-|  Post condition     | \<Boolean expression, must evaluate to true after UC is finished> |
-|  Nominal Scenario     | \<Textual description of actions executed by the UC> |
-|  Variants     | \<other executions, ex in case of errors> |
+|  Precondition     | the transaction has arleady been executed |  
+|  Post condition     |  |
+|  Nominal Scenario     | after the payment the systems immediately sends in the database all the information about that specific transaction |
 
-### Use case 13, UCx
-| Actors Involved        |  |
+### Use case 13, UC4 - Hadle the inventory
+| Actors Involved        |  owner , employee |
 | ------------- |:-------------:| 
-|  Precondition     | \<Boolean expression, must evaluate to true before the UC can start> |  
-|  Post condition     | \<Boolean expression, must evaluate to true after UC is finished> |
-|  Nominal Scenario     | \<Textual description of actions executed by the UC> |
-|  Variants     | \<other executions, ex in case of errors> |
+|  Precondition     | the product is in the inventory |  
+|  Post condition     |  |
+|  Nominal Scenario     | the owner check the stock list of product and perform different actions on it |
 
-### Use case 14, UCx
-| Actors Involved        |  |
+### Use case 14, UC4.1 add a new product 
+| Actors Involved        |  owner, employee |
 | ------------- |:-------------:| 
-|  Precondition     | \<Boolean expression, must evaluate to true before the UC can start> |  
-|  Post condition     | \<Boolean expression, must evaluate to true after UC is finished> |
-|  Nominal Scenario     | \<Textual description of actions executed by the UC> |
-|  Variants     | \<other executions, ex in case of errors> |
+|  Precondition     | check the stock status first and check if the product is below threshold |  
+|  Post condition     |  |
+|  Nominal Scenario     |	if the stock no longer have enough of product X and it is arleady delivered from the supplier then add it in the stock  |
 
-### Use case 15, UCx
-| Actors Involved        |  |
+### Use case 15, UC4.17 - delete a product in inventory
+| Actors Involved        | owner |
 | ------------- |:-------------:| 
-|  Precondition     | \<Boolean expression, must evaluate to true before the UC can start> |  
-|  Post condition     | \<Boolean expression, must evaluate to true after UC is finished> |
-|  Nominal Scenario     | \<Textual description of actions executed by the UC> |
-|  Variants     | \<other executions, ex in case of errors> |
+|  Precondition     | the product is present in the inventory,product qty=0 |  
+|  Post condition     |  |
+|  Nominal Scenario     |	the owner deletes a product; meaning no longer wants to sell it; presses delete product on the app  |
 
-### Use case 16, UCx
-| Actors Involved        |  |
+### Use case 16, UC5 - Manage Customers 
+| Actors Involved        | customers with fidelity cards , employee |
 | ------------- |:-------------:| 
-|  Precondition     | \<Boolean expression, must evaluate to true before the UC can start> |  
-|  Post condition     | \<Boolean expression, must evaluate to true after UC is finished> |
-|  Nominal Scenario     | \<Textual description of actions executed by the UC> |
-|  Variants     | \<other executions, ex in case of errors> |
+|  Precondition     | the customer has an email |  
+|  Post condition     | customer gets a new fidelity card |
+|  Nominal Scenario     |  |
 
-### Use case 17, UCx
-| Actors Involved        |  |
+### Use case 17, UC6 - support accounting
+| Actors Involved        | employee,owner |
 | ------------- |:-------------:| 
-|  Precondition     | \<Boolean expression, must evaluate to true before the UC can start> |  
-|  Post condition     | \<Boolean expression, must evaluate to true after UC is finished> |
-|  Nominal Scenario     | \<Textual description of actions executed by the UC> |
-|  Variants     | \<other executions, ex in case of errors> |
+|  Precondition     |  |  
+|  Post condition     |  |
+|  Nominal Scenario     | the owner can access the server and see the employee schedule or salary |
 
-### Use case 18, UCx
-| Actors Involved        |  |
+### Use case 18, UC 6.3 - View balance report
+| Actors Involved        | owner , bank employee |
 | ------------- |:-------------:| 
-|  Precondition     | \<Boolean expression, must evaluate to true before the UC can start> |  
-|  Post condition     | \<Boolean expression, must evaluate to true after UC is finished> |
-|  Nominal Scenario     | \<Textual description of actions executed by the UC> |
-|  Variants     | \<other executions, ex in case of errors> |
+|  Precondition     |  |  
+|  Post condition     |  |
+|  Nominal Scenario     | the owner performs this task to check the statistics of his sales eg: profit ... |
 
-### Use case 19, UCx
-| Actors Involved        |  |
+### Use case 19, UC7.1 - Handle orders
+| Actors Involved        | owner |
 | ------------- |:-------------:| 
-|  Precondition     | \<Boolean expression, must evaluate to true before the UC can start> |  
-|  Post condition     | \<Boolean expression, must evaluate to true after UC is finished> |
-|  Nominal Scenario     | \<Textual description of actions executed by the UC> |
-|  Variants     | \<other executions, ex in case of errors> |
+|  Precondition     | the orders list is present in the server |  
+|  Post condition     |  |
+|  Nominal Scenario     | the owner lists all the orders active |
 
-### Use case 20, UCx
-| Actors Involved        |  |
+## Use case 20, UC7.2,7.3 - create Order
+| Actors Involved        |  owner |
 | ------------- |:-------------:| 
-|  Precondition     | \<Boolean expression, must evaluate to true before the UC can start> |  
-|  Post condition     | \<Boolean expression, must evaluate to true after UC is finished> |
-|  Nominal Scenario     | \<Textual description of actions executed by the UC> |
-|  Variants     | \<other executions, ex in case of errors> |
+|  Precondition     | check the stock status, product quantity is above threshold |  
+|  Post condition     |  |
+|  Nominal Scenario     |	the owner first checks if the product is arleady absent in the stock and then creates the order  |
+|  Variants     | the product is above the threshold then abort the task |
 
-### Use case 21, UCx
-| Actors Involved        |  |
+### Use case 21, UC7.4 delete Order
+| Actors Involved        | owner |
 | ------------- |:-------------:| 
-|  Precondition     | \<Boolean expression, must evaluate to true before the UC can start> |  
-|  Post condition     | \<Boolean expression, must evaluate to true after UC is finished> |
-|  Nominal Scenario     | \<Textual description of actions executed by the UC> |
-|  Variants     | \<other executions, ex in case of errors> |
+|  Precondition     |  the product has quantity above threshold |  
+|  Post condition     |  |
+|  Nominal Scenario     | the owner wants to delete an order after arleady processed  |
+|  Variants     | the owner no longer wants the product |
 
-### Use case 22, UCx
-| Actors Involved        |  |
+### Use case 22, UC8 - Handle supplier
+| Actors Involved        |  owner |
 | ------------- |:-------------:| 
-|  Precondition     | \<Boolean expression, must evaluate to true before the UC can start> |  
-|  Post condition     | \<Boolean expression, must evaluate to true after UC is finished> |
-|  Nominal Scenario     | \<Textual description of actions executed by the UC> |
-|  Variants     | \<other executions, ex in case of errors> |
+|  Precondition     |  |  
+|  Post condition     |  |
+|  Nominal Scenario     | the owner wants to add,delete or edit suppliers information |
 
 
 
