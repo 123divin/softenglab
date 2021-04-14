@@ -457,8 +457,17 @@ handleSupplier ..> deleteSupplier :<<include>>
 | ------------- |:-------------:|
 |Precondition| the systems crashes|
 |Postcondition| the owner takes necessary measures|
-|Step#		| 	Step description|
-|1			|employee presses a button to inform the owner|
+|Step#		| description|
+|1		|	employee presses a button to inform the owner|
+
+| Scenario 1.1 |corresponds to uc1 |
+| ------------- |:-------------:| 
+|  Precondition     | the owner's email or the employee's is arleady present  |
+|  Post condition     | the user is logged in |
+|Step#		| description |
+|1	|		press the login button|
+|2	|		type in your username and password|
+|3	|		press the login button on the form and submit it|
 
 ### Use case 9, UC3.4,3.5,3.6,3.7 - Handle sales
 | Actors Involved        | 	employee |
